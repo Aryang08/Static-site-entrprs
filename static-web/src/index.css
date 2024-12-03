@@ -1,0 +1,41 @@
+/* Tailwind CSS layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global custom styles */
+body {
+  @apply font-sans antialiased;
+}
+
+/* Custom utility classes (if needed) */
+.btn-primary {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Overriding Tailwind defaults (if necessary) */
+:root {
+  --tw-ring-color: rgba(59, 130, 246, 0.5); /* Custom ring color */
+}
+.custom-card {
+  @apply bg-card text-card-foreground rounded-lg p-4 shadow;
+}
+
